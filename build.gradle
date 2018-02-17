@@ -1,0 +1,42 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.1'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    configuration = [
+            applicationId    : 'com.ahmedadel.client.socialmediasignup',
+            minSdkVersion    : 21,
+            targetSdkVersion : 26,
+            compileSdkVersion: 26,
+            versionCode      : 1,
+            versionName      : '1.0.0',
+            buildToolsVersion: '26.0.2',
+    ]
+    socialMediaSignUpLibraries = [
+            facebookVersion  : '4.30.0',
+            googlePlusVersion: '11.8.0',
+            twitterVersion   : '3.2.0'
+    ]
+    libraries = [
+            supportLibraryVersion: '27.0.2'
+    ]
+}

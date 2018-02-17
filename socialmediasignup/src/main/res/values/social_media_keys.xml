@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="com.ahmedadel.socialmediasignup.facebookAppId">com.facebook.sdk.ApplicationId</string>
+    <string name="com.ahmedadel.socialmediasignup.googleWebClientId">com.ahmedadel.socialmediasignup.googleWebClientId</string>
+    <string name="com.ahmedadel.socialmediasignup.twitterConsumerKey">com.ahmedadel.socialmediasignup.twitterConsumerKey</string>
+    <string name="com.ahmedadel.socialmediasignup.twitterConsumerSecret">com.ahmedadel.socialmediasignup.twitterConsumerSecret</string>
+    <string name="com.ahmedadel.socialmediasignup.instagramClientId">com.ahmedadel.socialmediasignup.instagramClientId</string>
+    <string name="com.ahmedadel.socialmediasignup.instagramClientSecret">com.ahmedadel.socialmediasignup.instagramClientSecret</string>
+    <string name="com.ahmedadel.socialmediasignup.instagramRedirectUri">com.ahmedadel.socialmediasignup.instagramRedirectUri</string>
+</resources>

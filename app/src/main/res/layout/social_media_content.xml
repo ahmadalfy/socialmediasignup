@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/social_media_content_log_in_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="14dp"
+        android:textColor="@color/white"
+        tools:text="Social Media Type" />
+
+    <ImageView
+        android:id="@+id/social_media_content_iv"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@+id/social_media_content_log_in_btn"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/social_media_content_tv"
+        style="@style/text_view_18_regular"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/social_media_content_log_out_btn"
+        android:layout_below="@+id/social_media_content_iv"
+        android:layout_margin="14dp"
+        android:maxLines="10"
+        android:scrollbars="vertical"
+        android:textColor="@color/black"
+        tools:text="Social Media Data" />
+
+    <Button
+        android:id="@+id/social_media_content_log_out_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="14dp"
+        android:text="@string/sign_out"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        tools:text="Social Media Type" />
+
+</RelativeLayout>

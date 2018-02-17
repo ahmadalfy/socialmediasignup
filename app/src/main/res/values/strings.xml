@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">Social Media Sign-up</string>
+    <string name="tabbed_social_media">Tabbed Social Media</string>
+
+    <string name="facebook_title">Facebook</string>
+    <string name="google_plus_title">Google Plus</string>
+    <string name="twitter_title">Twitter</string>
+    <string name="instagram_title">Instagram</string>
+    <string name="linkedin_title">LinkedIn</string>
+
+    <string name="sign_out">Sign Out</string>
+
+    <string name="open_social_media_from_activity">Open Social Media From Activity</string>
+    <string name="open_social_media_from_fragment">Open Social Media From Fragment</string>
+</resources>

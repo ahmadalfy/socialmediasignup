@@ -1,0 +1,80 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.ahmedadel.socialmediasignup">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application>
+
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="\ ${facebookAppId}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.googleWebClientId"
+            android:value="\ ${googleWebClientId}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.twitterConsumerKey"
+            android:value="\ ${twitterConsumerKey}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.twitterConsumerSecret"
+            android:value="\ ${twitterConsumerSecret}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.instagramClientId"
+            android:value="\ ${instagramClientId}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.instagramClientSecret"
+            android:value="\ ${instagramClientSecret}" />
+
+        <meta-data
+            android:name="@string/com.ahmedadel.socialmediasignup.instagramRedirectUri"
+            android:value="\ ${instagramRedirectUri}" />
+
+        <activity
+            android:name=".FacebookSignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:launchMode="singleTask"
+            android:excludeFromRecents="true"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation" />
+
+        <activity
+            android:name=".GoogleSignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name=".TwitterSignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.AppCompat.Dialog" />
+
+        <activity
+            android:name=".InstagramSignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+        <activity
+            android:name=".LinkedInSignUpActivity"
+            android:configChanges="keyboard|keyboardHidden|screenLayout|screenSize|orientation"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+
+        <provider
+            android:authorities="${applicationId}.SocialMediaSignUpInitProvider"
+            android:name=".SocialMediaSignUpInitProvider"
+            android:exported="false" />
+
+    </application>
+
+</manifest>

@@ -1,0 +1,51 @@
+apply plugin: 'com.android.library'
+
+def appConfig = rootProject.ext.configuration
+def socialMediaSignUp = rootProject.ext.socialMediaSignUpLibraries
+
+android {
+
+    compileSdkVersion appConfig.compileSdkVersion
+    buildToolsVersion appConfig.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion appConfig.minSdkVersion
+        targetSdkVersion appConfig.targetSdkVersion
+        versionCode appConfig.versionCode
+        versionName appConfig.versionName
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+android.buildTypes.debug.manifestPlaceholders = [
+        facebookAppId        : "350888622094488",
+        googleWebClientId    : "309480769972-jful433vl7ogpsgcith2m28140h136ou.apps.googleusercontent.com",
+        twitterConsumerKey   : "hvzJqXm9cZ6FObfnbXumVh0Zy",
+        twitterConsumerSecret: "URuO64Jg5eccTtttaAyoraP54GWHxZeJuV6mhZx1dE2AutOaDm",
+        instagramClientId    : "10a38694bed84a09bf9b58c56b05b3b7",
+        instagramClientSecret: "5e4b93a4790d4a278285b9395b53f1d8",
+        instagramRedirectUri : "https://localhost/redirecturl"
+]
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation "com.android.support:appcompat-v7:$libraries.supportLibraryVersion"
+
+    implementation "com.facebook.android:facebook-android-sdk:$socialMediaSignUp.facebookVersion"
+    implementation "com.google.android.gms:play-services-auth:$socialMediaSignUp.googlePlusVersion"
+    implementation "com.twitter.sdk.android:twitter-core:$socialMediaSignUp.twitterVersion"
+
+    implementation files('libs/volley.jar')
+
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.1'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+}
