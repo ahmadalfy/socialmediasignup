@@ -154,7 +154,7 @@ ext {
 -----------------------------------------------------------------------------------------------------
 
 ## Contributing
-Any contributions are mote than welcomed from other developers to help us make the SDK even better.
+Any contributions are more than welcomed from other developers to help us make the SDK even better.
 Before you contribute there are a number of things that you should know please see [CONTRIBUTING.md](https://github.com/ahmed-adel-said/socialmediasignup/blob/master/CONTRIBUTING.md) for details.
 
 -----------------------------------------------------------------------------------------------------
