@@ -3,6 +3,9 @@ apply plugin: 'com.android.library'
 def appConfig = rootProject.ext.configuration
 def socialMediaSignUp = rootProject.ext.socialMediaSignUpLibraries
 
+group = 'com.github.ahmed-adel-said'
+version = '1.0'
+
 android {
 
     compileSdkVersion appConfig.compileSdkVersion
