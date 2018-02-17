@@ -10,7 +10,7 @@ So, SocialMediaSignUp library makes the magic for you, with only one line of cod
 - Google Plus
 - LinkedIn
 
-And get the user data without handling anything from your side just.
+And get the user data without handling anything from your side.
 SO EASY SO SIMPLE.
 
 -----------------------------------------------------------------------------------------------------
@@ -23,14 +23,13 @@ SO EASY SO SIMPLE.
   - **Twitter**
   - **Google Plus**
   - **LinkedIn**
-- Adding the **scopes** for each platform according to the application needs
-- Also support **default** scopes to get the minimum user data.
-- No need to extend, implement or add anything to your app.
+- Adding the **scopes** for each platform according to the application needs.
+- Support **default** scopes to get the minimum user data.
+- Used inside **Activity**, **Fragment** or event **Custom View**.
 - Update the **social media sdk versions** in **gradle file** of **your application**, which guarantee the **up-to-date** social media sdk versions.
 - Adding the social media **public**, **secret** and **application keys** in the **gradle file** of **your application** to guarantee the totally isolation between the library and the integrated application.
 - **No need** to add anything in **Manifest.xml** file, we did all of these to you in SocialMediaSignUp library ;).
-- **Easily integration**, with only one line of code you have what you need from the user dat from access token to personal data like name, email and profile picture.
-- Used inside **Activity**, **Fragment** or event **Custom View**.
+- **Easily integration**, with only one line of code you have what you need from the user data from access token to personal data like name, email and profile picture.
   
 -----------------------------------------------------------------------------------------------------
 
@@ -57,7 +56,7 @@ Step 1 : Add it in your root build.gradle at the end of repositories:
 Step 2 : Add the dependency
 ```java
 	dependencies {
-	        compile 'com.github.ahmed-adel-said:socialmediasignup:-SNAPSHOT'
+	        implementation 'com.github.ahmed-adel-said:socialmediasignup:-SNAPSHOT'
 	}
 ```
 For Maven :
@@ -139,6 +138,17 @@ android.defaultConfig.manifestPlaceholders = [
         instagramClientSecret : "INSTAGRAM_CLIENT_SECRET",
         instagramRedirectUri  : "INSTAGRAM_REDIRECT_URI"
 ]
+```
+
+5. You must add the social media sdk versions by yourself in the build.gradle file of the project module. Since our SocialMediaSignUp library will wait them from you to be your mission to always making the social media sdk versions up-to-date :
+```java
+ext {
+    socialMediaSignUpLibraries = [
+            facebookVersion  : '4.30.0',
+            googlePlusVersion: '11.8.0',
+            twitterVersion   : '3.2.0'
+    ]
+}
 ```
 
 -----------------------------------------------------------------------------------------------------
